@@ -28,8 +28,6 @@ def make(root, dataset, actions):
     total = len(dataset) * len(actions)
     progress = tqdm(total=total, desc='Converting')
     for image, label in dataset:
-        if video_i == 16:
-            break
         image = np.array(image, dtype=np.uint8)
         sprite_ = sprite.Sprite(image)
         for action_label, action_class in enumerate(actions):
